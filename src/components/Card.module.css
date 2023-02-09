@@ -1,0 +1,27 @@
+.card{
+  display: flex;
+  padding: 0.5rem;
+  width: 100vh;
+  height: 120px;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  align-items: center;
+  border: 1px solid #E2E8F0;
+}
+
+.details {
+  display: flex;
+}
+
+.details img{
+  border-radius: 50%;
+  width: 85px;
+  height: 85px;
+  margin-right: 1rem;
+}
+
+.details p:nth-child(1) {
+  color: #8C19D2; 
+}

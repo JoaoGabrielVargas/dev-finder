@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
-import axios from 'axios'
-import Card from '../components/Card';
+import React, { useState } from 'react';
+import axios from 'axios';
+import CardProfileHome from '../components/CardProfileHome';
 import styles from './Home.module.css';
 
 function Home() {
@@ -9,18 +9,18 @@ function Home() {
 
   const handleSearch = (e) => {
     setUser(e.target.value);
-  }
+  };
 
   const handleClick = async () => {
     await axios.get(`https://api.github.com/users/${user}`)
-    .then((response) => setDetails(response.data))
-  }
+      .then((response) => setDetails(response.data));
+  };
 
   return (
     <div className={styles.container}>
       <div className={styles.title}>
         <h1>
-          Dev Finder
+          Dev_Finder
         </h1>
       </div>
       <div className={styles.search}>
@@ -29,12 +29,14 @@ function Home() {
       </div>
       <div>
         {
-          details && <Card 
-          image={ details.avatar_url } 
-          username={details.login} 
-          description={details.bio} 
-          route={`/profile/${details.login}`}
-        />
+          details && (
+          <CardProfileHome
+            image={details.avatar_url}
+            username={details.login}
+            description={details.bio}
+            route={`/profile/${details.login}`}
+          />
+          )
         }
       </div>
     </div>

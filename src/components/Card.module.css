@@ -1,7 +1,8 @@
 .card{
   display: flex;
   padding: 1rem;
-  width: 100vh;
+  width: 100%;
+  max-width: 600px;
   height: 180px;
   justify-content: space-between;
   background-color: white;
@@ -38,4 +39,10 @@
   flex-direction: column;
   gap: 0.2rem;
   justify-content: space-around;
+}
+
+@media screen and (max-width: 412px){
+  .card {
+    font-size: 0.8rem;
+  }
 }

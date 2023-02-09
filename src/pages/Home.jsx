@@ -25,7 +25,7 @@ function Home() {
       </div>
       <div className={styles.search}>
         <input type="text" placeholder="Search" onChange={handleSearch} />
-        <button type="button" onClick={handleClick}> Search </button>
+        <button type="submit" onClick={handleClick}> Search </button>
       </div>
       <div>
         {

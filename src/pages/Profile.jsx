@@ -66,7 +66,7 @@ function Profile() {
               <p>{`@${details.login}`}</p>
             </div>
           </div>
-          <p>
+          <p className={styles.bio}>
             {details.bio}
           </p>
           <div>
@@ -98,21 +98,28 @@ function Profile() {
             </div>
             <div className={styles.followers_details}>
               <FaEnvelope />
-              <a href={`mailto:${details.email}`}>
-                {details.email ? details.email : 'Email não informado'}
-              </a>
+              {details.email ? (
+                <a href={`mailto:${details.twitter_username}`}>
+                  {details.email}
+                </a>
+              ) : 'Email não informado'}
             </div>
             <div className={styles.followers_details}>
               <FaLink />
-              <a href={details.blog}>
-                {details.blog ? details.blog : 'Site não informado'}
-              </a>
+              {details.blog ? (
+                <a href={details.blog}>
+                  {details.blog}
+                </a>
+              ) : 'Site não informado'}
             </div>
             <div className={styles.followers_details}>
               <FaTwitter />
-              <a href={details.twitter_username}>
-                {details.twitter_username ? `@${details.twitter_username}` : 'Twitter não informado'}
-              </a>
+              {details.twitter_username ? (
+                <a href={`https://www.twitter.com/${details.twitter_username}`}>
+                  {details.twitter_username}
+                </a>
+              ) : 'Twitter não informado'}
+
             </div>
           </div>
           <Link to="/">

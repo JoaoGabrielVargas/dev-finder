@@ -1,8 +1,8 @@
 .card{
   display: flex;
-  padding: 0.5rem;
+  padding: 1rem;
   width: 100vh;
-  height: 120px;
+  height: 180px;
   justify-content: space-between;
   background-color: white;
   border-radius: 6px;
@@ -25,4 +25,17 @@
 
 .details p:nth-child(1) {
   color: #8C19D2; 
+}
+
+.stars {
+  display: flex;
+  color: #4A5568;
+  gap: 0.5rem;
+}
+
+.repo_details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  justify-content: space-around;
 }

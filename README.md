@@ -109,9 +109,6 @@ $ npm install
 # Execute a aplicação em modo de desenvolvimento
 $ npm run dev
 
-# Executar os testes
-$ npm run test
-
 # A aplicação será aberta na porta indicada pelo VITE. Acesse o link no terminal! :smiley:
 
 ```

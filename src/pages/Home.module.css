@@ -50,3 +50,9 @@
   border: solid 1px #8C19D2;
   color: #8C19D2;
 }
+
+@media screen and (max-width: 412px){
+  .container {
+    height: 70vh;
+  }
+}

@@ -1,5 +1,5 @@
 <h1 align="center">
-     :floppy_disk:<a href="#" alt="Git-Finder"> Git Finder </a>
+     :floppy_disk:<a href="#" alt="Dev-Finder"> Dev Finder </a>
 </h1>
 
 <h3 align="center">

@@ -48,23 +48,23 @@ Git Finder é uma aplicação que consome duas API's do Github, retornando as in
 ### Mobile
 
 <p align="center">
-  <img alt="MobileHome" title="#MobileHome" src="./assets/mobile-home.png" width="200px">
+  <img alt="MobileHome" title="#MobileHome" src="https://github.com/JoaoGabrielVargas/dev-finder/blob/main/src/assets/mobile-home.png" width="200px">
 
-  <img alt="MobileProfileDetails" title="#MobileProfileDetails" src="./assets/mobile-profile-details.png" width="200px">
+  <img alt="MobileProfileDetails" title="#MobileProfileDetails" src="https://github.com/JoaoGabrielVargas/dev-finder/blob/main/src/assets/mobile-profile-details.png" width="200px">
   
-  <img alt="MobileProfileRepos" title="#MobileProfileRepos" src="./assets/mobile-profile-repos.png" width="200px">
+  <img alt="MobileProfileRepos" title="#MobileProfileRepos" src="https://github.com/JoaoGabrielVargas/dev-finder/blob/main/src/assets/mobile-profile-repos.png" width="200px">
 </p>
 
 ### Web
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="WebHome" title="#WebHome" src="./assets/web-home.png" width="400px">
+  <img alt="WebHome" title="#WebHome" src="https://github.com/JoaoGabrielVargas/dev-finder/blob/main/src/assets/web-home.png" width="400px">
   
-  <img alt="WebHomeDetails" title="#WebHomeDetails" src="./assets/web-home-details.png" width="400px">
+  <img alt="WebHomeDetails" title="#WebHomeDetails" src="https://github.com/JoaoGabrielVargas/dev-finder/blob/main/src/assets/web-home-details.png" width="400px">
 
-  <img alt="WebProfileDetails" title="#WebProfileDetails" src="./assets/web-profile-details.png" width="400px">
+  <img alt="WebProfileDetails" title="#WebProfileDetails" src="https://github.com/JoaoGabrielVargas/dev-finder/blob/main/src/assets/web-profile-details.png" width="400px">
   
-  <img alt="WebProfileRepos" title="#WebProfileRepos" src="./assets/web-profile-repos.png" width="400px">
+  <img alt="WebProfileRepos" title="#WebProfileRepos" src="https://github.com/JoaoGabrielVargas/dev-finder/blob/main/src/assets/web-profile-repos.png" width="400px">
 </p>
 
 ---

@@ -28,7 +28,7 @@ Tabela de conteúdos
 
 ## 💻 Sobre o projeto
 
-<p>Git Finder é uma aplicação que consome duas API's do Github, retornando as informações do usuário buscado e seus repositórios, ordenados pela quantidade de estrelas. </p>
+<p>Dev Finder é uma aplicação que consome duas API's do Github, retornando as informações do usuário buscado e seus repositórios, ordenados pela quantidade de estrelas. </p>
 <p> Utilizei o React para construir a aplicação, por acreditar ser uma eficiente forma de componentizar e tornar aplicações web dinâmicas e modernas. Para auxiliar na construção, resolvei inicializar o projeto utilizando o VITE, o que me deu agilidade na hora de começar a codar e executar o projeto em ambiente de desenvolvimento. </p>
 <p> Também utilizei as bibliotecas do React-Icons e React-Loading para compor a página. Em desenvolvimento, utilizei o EsLint no projeto para trazer ao código as melhores práticas do mercado, levando um código limpo e legível para os outros devs. </p>
 Também para deixar o código limpo e organizado, separei os arquivos por pastas: 

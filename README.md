@@ -1,9 +1,9 @@
 <h1 align="center">
-     ♻️ <a href="#" alt="Git-Finder"> Git Finder </a>
+     :floppy_disk:<a href="#" alt="Git-Finder"> Git Finder </a>
 </h1>
 
 <h3 align="center">
-    :floppy_disk: Seu marketplace de coleta de resíduos. Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente. :floppy_disk:
+     Seu pesquisador de usuários do Github preferido! :floppy_disk:
 </h3>
 
 <h4 align="center">
@@ -27,8 +27,6 @@ Tabela de conteúdos
 
 
 ## 💻 Sobre o projeto
-
-♻️ Ecoleta - é uma forma de conectar empresas e entidades de coleta de resíduos orgânicos e inorgânicos as pessoas que precisam descartar seus resíduos de maneira ecológica.
 
 Git Finder é uma aplicação que consome duas API's do Github, retornando as informações do usuário buscado e seus repositórios, ordenados pela quantidade de estrelas. 
 

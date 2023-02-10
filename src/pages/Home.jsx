@@ -1,19 +1,31 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import ReactLoading from 'react-loading';
 import CardProfileHome from '../components/CardProfileHome';
 import styles from './Home.module.css';
+import { getApiUsersGithub } from '../services/api';
 
 function Home() {
   const [user, setUser] = useState('');
   const [details, setDetails] = useState('');
+  const [err, setErr] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleSearch = (e) => {
     setUser(e.target.value);
+    setErr('');
   };
 
+  /*  setLoading(true); */
+  /* await getApiUsersGithub(user)
+      .then((response) => setDetails(response?.data))
+      .catch((err) => setError(err));
+    setLoading(false); */
+  /* setLoading(false); */
+
   const handleClick = async () => {
-    await axios.get(`https://api.github.com/users/${user}`)
-      .then((response) => setDetails(response.data));
+    setLoading(true);
+    await getApiUsersGithub(user).then((res) => setDetails(res.data));
+    setLoading(false);
   };
 
   return (
@@ -27,6 +39,8 @@ function Home() {
         <input type="text" placeholder="Search" onChange={handleSearch} />
         <button type="submit" onClick={handleClick}> Search </button>
       </div>
+      { err && 'Não foi possível completar essa busca, tente novamente mais tarde' }
+      { loading && <ReactLoading type="spin" color="#8C19D2" height={50} width={50} /> }
       <div>
         {
           details && (

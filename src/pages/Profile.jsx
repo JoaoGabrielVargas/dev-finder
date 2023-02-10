@@ -9,21 +9,23 @@ import {
   FaLink,
   FaTwitter,
 } from 'react-icons/fa';
-import axios from 'axios';
+import ReactLoading from 'react-loading';
 import Card from '../components/Card';
 import styles from './Profile.module.css';
+import { getApiReposGithub, getApiUsersGithub } from '../services/api';
 
 function Profile() {
   const [details, setDetails] = useState({});
   const [repos, setRepos] = useState();
   const [newUser, setNewUser] = useState('');
+  const [loading, setLoading] = useState(false);
   const { user } = useParams();
 
   const handleSearch = (e) => {
     setNewUser(e.target.value);
   };
 
-  const handleClick = async () => {
+  /*  const handleClick = async () => {
     await axios.get(`https://api.github.com/users/${newUser}`)
       .then(async (response) => {
         setDetails(response.data);
@@ -31,15 +33,25 @@ function Profile() {
           .then((resRepos) => setRepos(resRepos.data));
       });
   };
+ */
+
+  const handleClick = async () => {
+    setLoading(true);
+    await getApiUsersGithub(newUser).then(async (response) => {
+      setDetails(response.data);
+      await getApiReposGithub(newUser).then((resRepos) => setRepos(resRepos.data));
+    });
+    setLoading(false);
+  };
 
   useEffect(() => {
     const getData = async () => {
-      await axios.get(`https://api.github.com/users/${user}`)
-        .then(async (response) => {
-          setDetails(response.data);
-          await axios.get(`https://api.github.com/users/${user}/repos`)
-            .then((resRepos) => setRepos(resRepos.data));
-        });
+      setLoading(true);
+      await getApiUsersGithub(user).then(async (response) => {
+        setDetails(response.data);
+        await getApiReposGithub(user).then((resRepos) => setRepos(resRepos.data));
+      });
+      setLoading(false);
     };
     getData();
   }, []);
@@ -128,6 +140,7 @@ function Profile() {
         </div>
 
         <div className={styles.repos}>
+          { loading && <ReactLoading type="spin" color="#8C19D2" height={50} width={50} /> }
           {repos && repos.sort((a, b) => {
             if (a.stargazers_count < b.stargazers_count) return 1;
             if (a.stargazers_count > b.stargazers_count) return -1;

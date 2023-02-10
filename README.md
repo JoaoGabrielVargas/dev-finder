@@ -78,7 +78,7 @@ Antes de começar, você precisa ter instalado em sua máquina as seguintes ferr
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
 
-#### 🧭 Rodando a aplicação
+## 🧭 Rodando a aplicação
 
 ```bash
 
@@ -104,7 +104,7 @@ $ npm run dev
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
-#### **Website**  ([React](https://reactjs.org/))
+## **Website**  ([React](https://reactjs.org/))
 
 -   **[React Router Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)**
 -   **[React Icons](https://react-icons.github.io/react-icons/)**

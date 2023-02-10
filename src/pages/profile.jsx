@@ -18,6 +18,7 @@ function Profile() {
   const [details, setDetails] = useState({});
   const [repos, setRepos] = useState();
   const [newUser, setNewUser] = useState('');
+  const [err, setErr] = useState('');
   const [loading, setLoading] = useState(false);
   const { user } = useParams();
 
@@ -25,22 +26,12 @@ function Profile() {
     setNewUser(e.target.value);
   };
 
-  /*  const handleClick = async () => {
-    await axios.get(`https://api.github.com/users/${newUser}`)
-      .then(async (response) => {
-        setDetails(response.data);
-        await axios.get(`https://api.github.com/users/${newUser}/repos`)
-          .then((resRepos) => setRepos(resRepos.data));
-      });
-  };
- */
-
   const handleClick = async () => {
     setLoading(true);
     await getApiUsersGithub(newUser).then(async (response) => {
       setDetails(response.data);
       await getApiReposGithub(newUser).then((resRepos) => setRepos(resRepos.data));
-    });
+    }).catch((error) => setErr(error));
     setLoading(false);
   };
 
@@ -69,6 +60,7 @@ function Profile() {
           <button type="button" onClick={handleClick}> Search </button>
         </div>
       </header>
+      { err && 'Não foi possível completar essa busca, tente novamente mais tarde' }
       <div className={styles.container}>
         <div className={styles.user_information}>
           <div className={styles.user_information_name}>

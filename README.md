@@ -20,9 +20,9 @@ Tabela de conteúdos
      * [Web](#web)
    * [Como executar o projeto](#-como-executar-o-projeto)
      * [Pré-requisitos](#pré-requisitos)
-     * [Rodando a aplicação](#user-content--rodando-a-aplicação-web-frontend)
+     * [Rodando a aplicação](#rodando-a-aplicação)
    * [Tecnologias](#-tecnologias)
-     * [WebSite](#user-content-website--react----typescript)
+     * [WebSite](#WebSite)
 <!--te-->
 
 

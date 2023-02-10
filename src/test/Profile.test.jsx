@@ -1,12 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 import { render, fireEvent } from '@testing-library/react';
-import {
-  describe, it, expect, jest,
-} from 'jest';
 import Home from '../pages/Home';
 
-jest.mock('axios');
+jest.moch(axios);
 
 describe('Home', () => {
   it('should render the title', () => {

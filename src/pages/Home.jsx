@@ -15,16 +15,11 @@ function Home() {
     setErr('');
   };
 
-  /*  setLoading(true); */
-  /* await getApiUsersGithub(user)
-      .then((response) => setDetails(response?.data))
-      .catch((err) => setError(err));
-    setLoading(false); */
-  /* setLoading(false); */
-
   const handleClick = async () => {
     setLoading(true);
-    await getApiUsersGithub(user).then((res) => setDetails(res.data));
+    await getApiUsersGithub(user)
+      .then((res) => setDetails(res.data))
+      .catch((error) => setErr(error));
     setLoading(false);
   };
 
